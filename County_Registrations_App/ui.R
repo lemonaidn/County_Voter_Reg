@@ -15,6 +15,9 @@ library(ggthemes)
 library(shinythemes)
 library(lubridate)
 
+df_2016 = read.csv('df_2016.csv')
+df_2020 = read.csv('df_2020.csv')
+
 # Define UI for application
 fluidPage(theme = shinytheme('cerulean'),
           
@@ -32,7 +35,7 @@ fluidPage(theme = shinytheme('cerulean'),
                   tabsetPanel(
                       
                       tabPanel('Home',
-                               'This web app provides insights into voter registration rates across New Jersey, and demonstrates the impact caused by COVID on voter registration rates.',
+                               'This web app provides insights and demonstrates the impact caused by COVID on voter registration rates in NJ.',
                                "Data is sourced from the NJ Division of Elections Voter Registration Statistics Archive, which can be accessed at https://www.state.nj.us/state/elections/election-information-svrs.shtml",
                                "An analysis of the data reveals the intense impact that COVID had on the ability of NJ citizens to register to vote.",
                                "While there was only one instance of near- or below-zero Percent Change in monthly registrations across all congressional districts in 2016, there were at least 12 such incidents in 2020.",
